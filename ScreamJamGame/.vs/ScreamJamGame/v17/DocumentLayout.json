@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kalan\\OneDrive\\Documents\\GitHub\\ScreamJam2025_krbg\\ScreamJamGame\\",
+  "WorkspaceRootPath": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\kalan\\onedrive\\documents\\github\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\ajd40\\desktop\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|solutionrelative:screamjamgame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\kalan\\onedrive\\documents\\github\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\ajd40\\desktop\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|solutionrelative:screamjamgame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\kalan\\onedrive\\documents\\github\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\icon.bmp||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\ajd40\\desktop\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\icon.bmp||{58961B49-13E0-48C0-9258-13CBC4D40279}",
       "RelativeMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|solutionrelative:screamjamgame\\icon.bmp||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     }
   ],
@@ -28,24 +28,23 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kalan\\OneDrive\\Documents\\GitHub\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Program.cs",
               "RelativeDocumentMoniker": "ScreamJamGame\\Program.cs",
-              "ToolTip": "C:\\Users\\kalan\\OneDrive\\Documents\\GitHub\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Program.cs",
+              "ToolTip": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Program.cs",
               "RelativeToolTip": "ScreamJamGame\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T19:26:45.146Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T19:26:45.146Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Users\\kalan\\OneDrive\\Documents\\GitHub\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Game1.cs",
+              "DocumentMoniker": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Game1.cs",
               "RelativeDocumentMoniker": "ScreamJamGame\\Game1.cs",
-              "ToolTip": "C:\\Users\\kalan\\OneDrive\\Documents\\GitHub\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Game1.cs",
+              "ToolTip": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Game1.cs",
               "RelativeToolTip": "ScreamJamGame\\Game1.cs",
-              "ViewState": "AgIAAA8AAADAY2ZmZmYjwCwAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T19:26:42.953Z",
               "EditorCaption": ""
@@ -54,9 +53,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Icon.bmp",
-              "DocumentMoniker": "C:\\Users\\kalan\\OneDrive\\Documents\\GitHub\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Icon.bmp",
+              "DocumentMoniker": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Icon.bmp",
               "RelativeDocumentMoniker": "ScreamJamGame\\Icon.bmp",
-              "ToolTip": "C:\\Users\\kalan\\OneDrive\\Documents\\GitHub\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Icon.bmp",
+              "ToolTip": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Icon.bmp",
               "RelativeToolTip": "ScreamJamGame\\Icon.bmp",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
               "WhenOpened": "2025-10-09T19:26:41.139Z"
