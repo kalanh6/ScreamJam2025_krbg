@@ -40,18 +40,17 @@ namespace ScreamJamGame
         }
 
         //Constructor for player
-        public Player (GraphicsDevice graphicsDevice, Vector2 position, Rectangle bounds, Texture2D texture)
+        public Player (GraphicsDevice graphicsDevice, Vector2 position, Rectangle bounds, Texture2D texture) : base(bounds, texture)
         {
             _graphicsDevice = graphicsDevice;
             playerTexture = texture;
             playerPos = position;
             playerBounds = bounds;
-
             isAlive = true;
             hasWeapon = false;
         }
 
-        public void Update (GameTime gameTime)
+        public override void Update (GameTime gameTime)
         {
             if (isAlive == true)
             {
@@ -64,10 +63,20 @@ namespace ScreamJamGame
                 {
                     playerPos.X += 1;
                 }
+
+                keyState = Keyboard.GetState();
+                if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Up))
+                {
+                    playerPos.Y -= 1;
+                }
+                else if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Down))
+                {
+                    playerPos.Y += 1;
+                }
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             if (isAlive == true)
             {

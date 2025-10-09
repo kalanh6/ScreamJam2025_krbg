@@ -24,3 +24,4 @@ C:\Users\ajd40\Desktop\ScreamJam2025_krbg\ScreamJamGame\ScreamJamGame\obj\Debug\
 C:\Users\ajd40\Desktop\ScreamJam2025_krbg\ScreamJamGame\ScreamJamGame\obj\Debug\net6.0\ScreamJamGame.pdb
 C:\Users\ajd40\Desktop\ScreamJam2025_krbg\ScreamJamGame\ScreamJamGame\obj\Debug\net6.0\ScreamJamGame.genruntimeconfig.cache
 C:\Users\ajd40\Desktop\ScreamJam2025_krbg\ScreamJamGame\ScreamJamGame\obj\Debug\net6.0\ref\ScreamJamGame.dll
+C:\Users\ajd40\Desktop\ScreamJam2025_krbg\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\temp.xnb
