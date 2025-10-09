@@ -102,19 +102,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\glgal\\.nuget\\packages\\": {}
+    "C:\\Users\\kalan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\glgal\\OneDrive\\Documents\\ScreamJam\\ScreamJamGame\\ScreamJamGame\\ScreamJamGame.csproj",
+      "projectUniqueName": "C:\\Users\\kalan\\OneDrive\\Documents\\GitHub\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\ScreamJamGame.csproj",
       "projectName": "ScreamJamGame",
-      "projectPath": "C:\\Users\\glgal\\OneDrive\\Documents\\ScreamJam\\ScreamJamGame\\ScreamJamGame\\ScreamJamGame.csproj",
-      "packagesPath": "C:\\Users\\glgal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\glgal\\OneDrive\\Documents\\ScreamJam\\ScreamJamGame\\ScreamJamGame\\obj\\",
+      "projectPath": "C:\\Users\\kalan\\OneDrive\\Documents\\GitHub\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\ScreamJamGame.csproj",
+      "packagesPath": "C:\\Users\\kalan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kalan\\OneDrive\\Documents\\GitHub\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\glgal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kalan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
