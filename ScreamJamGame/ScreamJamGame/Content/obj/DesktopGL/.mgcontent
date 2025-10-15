@@ -4,9 +4,11 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/ajd40/Desktop/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/consolas-24.spritefont</File>
     <File>C:/Users/ajd40/Desktop/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/temp.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

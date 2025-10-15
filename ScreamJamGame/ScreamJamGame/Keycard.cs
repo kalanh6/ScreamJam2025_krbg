@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScreamJamGame
 {
-   // internal class Keys: GameObject
+   // internal class Keycard: GameObject
    // {
     // }
 }
