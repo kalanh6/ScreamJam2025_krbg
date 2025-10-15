@@ -52,3 +52,4 @@ C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\obj\Debu
 C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\obj\Debug\net6.0\ScreamJamGame.pdb
 C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\obj\Debug\net6.0\ScreamJamGame.genruntimeconfig.cache
 C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\obj\Debug\net6.0\ref\ScreamJamGame.dll
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\consolas-24.xnb

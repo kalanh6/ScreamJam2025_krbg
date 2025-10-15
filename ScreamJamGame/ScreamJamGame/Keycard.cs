@@ -31,7 +31,7 @@ namespace ScreamJamGame
 
         public override void Update(GameTime gameTime)
         {
-            if (keycardBounds.Intersects(player.PlayerBounds))
+            if (keycardBounds.Intersects(player.PlayerBounds) && !collected)
             {
                 collected = true;
                 player.HasKey = true;

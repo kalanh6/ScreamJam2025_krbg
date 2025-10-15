@@ -1,2 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/glgal/OneDrive/Documents/ScreamJam/ScreamJamGame/ScreamJamGame/Content/consolas-24.spritefont","C:/Users/glgal/OneDrive/Documents/ScreamJam/ScreamJamGame/ScreamJamGame/Content/bin/DesktopGL/Content/consolas-24.xnb","FontDescriptionProcessor","SpriteFontContent",2071,70687,0.3449751
 "C:/Users/glgal/OneDrive/Documents/ScreamJam/ScreamJamGame/ScreamJamGame/Content/temp.png","C:/Users/glgal/OneDrive/Documents/ScreamJam/ScreamJamGame/ScreamJamGame/Content/bin/DesktopGL/Content/temp.xnb","TextureProcessor","Texture2DContent",291,25429,0.2088211
