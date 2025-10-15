@@ -20,9 +20,9 @@ namespace ScreamJamGame
         //General fields for player stats and sizing
         private Vector2 playerPos;
         private Rectangle playerBounds;
-        private bool hasWeapon;
         private bool isAlive;
         private bool hasKey;
+        private int ammo;
 
         //Player input
         private KeyboardState keyState;
@@ -52,6 +52,12 @@ namespace ScreamJamGame
             set { hasKey = value; }
         }
 
+        public int Ammo
+        {
+            get { return ammo; }
+            set { ammo = value; }
+        }
+
         //Constructor for player
         public Player (GraphicsDevice graphicsDevice, Vector2 position, Rectangle bounds, Texture2D texture) : base(bounds, texture)
         {
@@ -60,7 +66,7 @@ namespace ScreamJamGame
             playerPos = position;
             playerBounds = bounds;
             isAlive = true;
-            hasWeapon = false;
+            ammo = 3;
             hasKey = false;
         }
 

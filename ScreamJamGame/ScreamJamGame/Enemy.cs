@@ -20,13 +20,33 @@ namespace ScreamJamGame
         private Rectangle enemyBounds;
 
         //Class-specific fields
+        private bool isStunned;
+        private int stunTimer;
         private Player player;
+
+        public Rectangle EnemyBounds
+        {
+            get { return enemyBounds; }
+        }
+
+        public bool IsStunned
+        {
+            get { return isStunned; }
+            set { isStunned = value; }
+        }
+
+        public int StunTimer
+        {
+            get { return stunTimer; }
+            set { stunTimer = value }
+        }
 
         public Enemy(GraphicsDevice graphicsDevice, Vector2 position, Rectangle bounds, Texture2D texture, Player player) : base (bounds, texture)
         {
             enemyPos = position;
             enemyBounds = bounds;
             enemyTexture = texture;
+            isStunned = false;
             this.player = player;
         }
 
@@ -36,7 +56,7 @@ namespace ScreamJamGame
             {
                 player.IsAlive = false;
             }
-            else if (player.IsAlive == true)
+            else if (player.IsAlive == true && isStunned == false)
             {
                 string directionX;
                 string directionY;
@@ -75,6 +95,17 @@ namespace ScreamJamGame
                 else
                 {
                     enemyPos.Y += 1;
+                }
+            }
+            else if (player.IsAlive == true && isStunned == true)
+            {
+                if (stunTimer <=0)
+                {
+                    isStunned = false;
+                }
+                else
+                {
+                    stunTimer -= 1;
                 }
             }
         }
