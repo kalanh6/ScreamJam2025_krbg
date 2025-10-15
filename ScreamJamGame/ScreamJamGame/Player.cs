@@ -40,6 +40,12 @@ namespace ScreamJamGame
             get { return playerBounds; }
         }
 
+        public bool IsAlive
+        {
+            get { return isAlive; }
+            set { isAlive = value; }
+        }
+
         public bool HasKey
         {
             get { return hasKey; }
@@ -65,21 +71,21 @@ namespace ScreamJamGame
                 keyState = Keyboard.GetState();
                 if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Left))
                 {
-                    playerPos.X -= 1;
+                    playerPos.X -= 2;
                 }
                 else if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Right))
                 {
-                    playerPos.X += 1;
+                    playerPos.X += 2;
                 }
 
                 keyState = Keyboard.GetState();
                 if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Up))
                 {
-                    playerPos.Y -= 1;
+                    playerPos.Y -= 2;
                 }
                 else if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Down))
                 {
-                    playerPos.Y += 1;
+                    playerPos.Y += 2;
                 }
             }
         }
