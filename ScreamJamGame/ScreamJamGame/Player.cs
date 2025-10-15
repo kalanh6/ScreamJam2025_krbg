@@ -23,6 +23,8 @@ namespace ScreamJamGame
         private bool isAlive;
         private bool hasKey;
         private int ammo;
+        private string directionX;
+        private string directionY;
 
         //Player input
         private KeyboardState keyState;
@@ -59,6 +61,16 @@ namespace ScreamJamGame
             set { ammo = value; }
         }
 
+        public string DirectionX
+        {
+            get { return directionX; }
+        }
+
+        public string DirectionY
+        {
+            get { return directionY; }
+        }
+
         //Constructor for player
         public Player (GraphicsDevice graphicsDevice, Vector2 position, Rectangle bounds, Texture2D texture) : base(bounds, texture)
         {
@@ -79,6 +91,7 @@ namespace ScreamJamGame
                 if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Left))
                 {
                     playerPos.X -= 2;
+                    directionX = "left";
                 }
                 if (keyState.IsKeyDown(Keys.Left)/* && position.X <= 0*/)
                 {
@@ -87,6 +100,7 @@ namespace ScreamJamGame
                 if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Right))
                 {
                     playerPos.X += 2;
+                    directionX = "right";
                 }
                 if (keyState.IsKeyDown(Keys.Right) /*&& position.X >= playerBounds.X*/)
                 {
@@ -96,6 +110,7 @@ namespace ScreamJamGame
                 if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Up))
                 {
                     playerPos.Y -= 2;
+                    directionY = "up";
                 }
                 if (keyState.IsKeyDown(Keys.Up) && position.Y >= -500000000)
                 {
@@ -104,6 +119,7 @@ namespace ScreamJamGame
                 if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Down))
                 {
                     playerPos.Y += 2;
+                    directionY = "down";
                 }
                 if (keyState.IsKeyDown(Keys.Down) && position.Y >= playerBounds.Y)
                 {
