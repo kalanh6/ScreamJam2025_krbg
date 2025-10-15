@@ -24,6 +24,10 @@ namespace ScreamJamGame
         private Player player;
         private Vector2 playerPos;
 
+        private Level myLevel;
+        private Texture2D spriteSheet;
+
+
         private GameState state;
 
         private List<Button> buttons;
@@ -56,6 +60,10 @@ namespace ScreamJamGame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             temp = Content.Load<Texture2D>("temp");
             consolas24 = Content.Load<SpriteFont>("consolas-24");
+
+            spriteSheet = Content.Load<Texture2D>("roguelikeSheet_transparent");
+            myLevel = new Level(spriteSheet, "../../../Content/textureMappingData.txt", _spriteBatch);
+
 
             playerPos = new Vector2(_graphics.PreferredBackBufferWidth/2,_graphics.PreferredBackBufferHeight/2);
             player = new Player(GraphicsDevice, playerPos, new Rectangle((int)playerPos.X, (int)playerPos.Y, 0, 0), temp);
@@ -101,9 +109,11 @@ namespace ScreamJamGame
             GraphicsDevice.Clear(Color.Red);
 
             // TODO: Add your drawing code here
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
             _spriteBatch.Draw(background, backgroundRect, Color.White);
             player.Draw(_spriteBatch);
+            myLevel.DisplayTiles();
+
 
             foreach (Button button in buttons)
             {

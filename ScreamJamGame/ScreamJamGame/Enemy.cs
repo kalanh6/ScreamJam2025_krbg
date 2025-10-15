@@ -38,7 +38,7 @@ namespace ScreamJamGame
         public int StunTimer
         {
             get { return stunTimer; }
-            set { stunTimer = value }
+            set { stunTimer = value; }
         }
 
         public Enemy(GraphicsDevice graphicsDevice, Vector2 position, Rectangle bounds, Texture2D texture, Player player) : base (bounds, texture)

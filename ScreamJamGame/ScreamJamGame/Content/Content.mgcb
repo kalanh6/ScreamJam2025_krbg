@@ -32,6 +32,21 @@
 /processorParam:TextureFormat=Color
 /build:download (5).jpg
 
+#begin level1.csv
+/copy:level1.csv
+
+#begin roguelikeSheet_transparent.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:roguelikeSheet_transparent.png
+
 #begin temp.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -43,4 +58,7 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:temp.png
+
+#begin textureMappingData.txt
+/copy:textureMappingData.txt
 
