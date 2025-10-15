@@ -28,6 +28,8 @@ namespace ScreamJamGame
 
         private List<Button> buttons;
         private SpriteFont consolas24;
+        Texture2D background;
+        private static Rectangle backgroundRect;
 
         public Game1()
         {
@@ -40,7 +42,12 @@ namespace ScreamJamGame
         {
             // TODO: Add your initialization logic here
             buttons = new List<Button>();
-
+            backgroundRect= new Rectangle(0, -200, 1000, 1050);
+            Camera.Load(
+                _graphics.PreferredBackBufferWidth,  //screen width
+                _graphics.PreferredBackBufferHeight, //screen height
+                1000,  //world width
+                1050);
             base.Initialize();
         }
 
@@ -50,11 +57,14 @@ namespace ScreamJamGame
             temp = Content.Load<Texture2D>("temp");
             consolas24 = Content.Load<SpriteFont>("consolas-24");
 
-            playerPos = new Vector2(0,0);
+            playerPos = new Vector2(_graphics.PreferredBackBufferWidth/2,_graphics.PreferredBackBufferHeight/2);
             player = new Player(GraphicsDevice, playerPos, new Rectangle((int)playerPos.X, (int)playerPos.Y, 0, 0), temp);
             {
 
             }
+
+            background = Content.Load<Texture2D>("download (5)");
+            player.PlayerBounds = new Rectangle((int)player.PlayerPos.X, (int)player.PlayerPos.Y, 1000, 1050);
 
             // TODO: use this.Content to load your game content here
         }
@@ -92,6 +102,7 @@ namespace ScreamJamGame
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
+            _spriteBatch.Draw(background, backgroundRect, Color.White);
             player.Draw(_spriteBatch);
 
             foreach (Button button in buttons)
@@ -101,9 +112,20 @@ namespace ScreamJamGame
                     button.Draw(_spriteBatch);
                 }
             }
+            _spriteBatch.DrawString(
+                consolas24,
+                $"{player.PlayerPos.X},{player.PlayerPos.Y}",
+                new Vector2(400, 240),
+                Color.Black
+            );
             _spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+        public static void BackgroundMove(Vector2 change)
+        {
+            backgroundRect.Y += (int)(change.Y / backgroundRect.Height * Camera.MaxHeight);
+            backgroundRect.X += (int)(change.X / backgroundRect.Width * Camera.MaxWidth);
         }
     }
 }

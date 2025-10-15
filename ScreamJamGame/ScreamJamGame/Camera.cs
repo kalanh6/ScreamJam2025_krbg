@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
-using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,8 +26,8 @@ namespace ScreamJamGame
         /// </summary>
         internal static Vector2 Offset { get { return _position; } }
 
-        internal static int maxWidth {  get { return _worldWidth; } }
-        internal static int maxHeight { get { return _worldHeight; } }
+        internal static int MaxWidth {  get { return _worldWidth; } }
+        internal static int MaxHeight { get { return _worldHeight; } }
 
         internal static Vector2 Screen { get { return new Vector2(_screenWidth, _screenHeight); } }
 
@@ -44,7 +47,11 @@ namespace ScreamJamGame
 
         public static void Update(Vector2 direction)
         {
-
+            /*if (!((_position.Y <= 0 && direction.Y < 0) || (_position.Y >= _worldHeight && direction.Y > 0)||(_position.X<=0 && direction.X<0)|| (_position.X >= _worldHeight && direction.X > 0)))
+            {*/
+                _position += direction;
+                Game1.BackgroundMove(direction);
+            /*}*/
         }
     }
 }
