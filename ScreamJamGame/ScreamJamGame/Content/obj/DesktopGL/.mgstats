@@ -1,2 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/ajd40/Desktop/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/temp.png","C:/Users/ajd40/Desktop/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/bin/DesktopGL/temp.xnb","TextureProcessor","Texture2DContent",291,25429,0.159342
+"C:/Users/ajd40/Desktop/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/consolas-24.spritefont","C:/Users/ajd40/Desktop/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/bin/DesktopGL/consolas-24.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21535,0.2044651
+"C:/Users/ajd40/Desktop/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/temp.png","C:/Users/ajd40/Desktop/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/bin/DesktopGL/temp.xnb","TextureProcessor","Texture2DContent",291,25429,0.0376674
