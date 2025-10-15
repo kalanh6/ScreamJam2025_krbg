@@ -58,7 +58,24 @@ namespace ScreamJamGame
             }
             else if(firing == true)
             {
-                projPos.X += 5;
+                if (player.DirectionX == "left")
+                {
+                    projPos.X -= 5;
+                }
+                else if (player.DirectionX == "right")
+                {
+                    projPos.X += 5;
+                }
+
+                if (player.DirectionY == "up")
+                {
+                    projPos.Y -= 5;
+                }
+                else if (player.DirectionY == "down")
+                {
+                    projPos.Y += 5;
+                }
+
                 travelTime -= 1;
             }
         }
