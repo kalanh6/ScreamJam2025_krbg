@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScreamJamGame
 {
-    internal class Enemy: GameObject
-    {
-    }
+   // internal class Enemy: GameObject
+   // {
+   // }
 }
