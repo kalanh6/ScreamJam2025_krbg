@@ -38,6 +38,7 @@ namespace ScreamJamGame
         public Rectangle PlayerBounds
         {
             get { return playerBounds; }
+            set { playerBounds = value; }
         }
 
         public bool IsAlive
@@ -79,19 +80,34 @@ namespace ScreamJamGame
                 {
                     playerPos.X -= 2;
                 }
-                else if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Right))
+                if (keyState.IsKeyDown(Keys.Left)/* && position.X <= 0*/)
+                {
+                    Camera.Update(new Vector2(2, 0));
+                }
+                if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Right))
                 {
                     playerPos.X += 2;
                 }
-
+                if (keyState.IsKeyDown(Keys.Right) /*&& position.X >= playerBounds.X*/)
+                {
+                    Camera.Update(new Vector2(-2, 0));
+                }
                 keyState = Keyboard.GetState();
                 if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Up))
                 {
                     playerPos.Y -= 2;
                 }
-                else if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Down))
+                if (keyState.IsKeyDown(Keys.Up) && position.Y >= -500000000)
+                {
+                    Camera.Update(new Vector2(0, 2));
+                }
+                if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Down))
                 {
                     playerPos.Y += 2;
+                }
+                if (keyState.IsKeyDown(Keys.Down) && position.Y >= playerBounds.Y)
+                {
+                    Camera.Update(new Vector2(0, -2));
                 }
             }
         }
