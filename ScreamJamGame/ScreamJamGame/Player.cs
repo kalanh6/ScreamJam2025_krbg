@@ -76,7 +76,7 @@ namespace ScreamJamGame
                 }
                 if (keyState.IsKeyDown(Keys.Left)/* && position.X <= 0*/)
                 {
-                    Camera.Update(new Vector2(-1, 0));
+                    Camera.Update(new Vector2(2, 0));
                 }
                 if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Right))
                 {
@@ -84,7 +84,7 @@ namespace ScreamJamGame
                 }
                 if (keyState.IsKeyDown(Keys.Right) /*&& position.X >= playerBounds.X*/)
                 {
-                    Camera.Update(new Vector2(1, 0));
+                    Camera.Update(new Vector2(-2, 0));
                 }
                 keyState = Keyboard.GetState();
                 if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Up))
@@ -93,7 +93,7 @@ namespace ScreamJamGame
                 }
                 if (keyState.IsKeyDown(Keys.Up) && position.Y >= -500000000)
                 {
-                    Camera.Update(new Vector2(0, -1));
+                    Camera.Update(new Vector2(0, 2));
                 }
                 if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Down))
                 {
@@ -101,7 +101,7 @@ namespace ScreamJamGame
                 }
                 if (keyState.IsKeyDown(Keys.Down) && position.Y >= playerBounds.Y)
                 {
-                    Camera.Update(new Vector2(0, 1));
+                    Camera.Update(new Vector2(0, -2));
                 }
             }
         }

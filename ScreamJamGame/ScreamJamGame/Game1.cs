@@ -42,7 +42,7 @@ namespace ScreamJamGame
         {
             // TODO: Add your initialization logic here
             buttons = new List<Button>();
-            backgroundRect= new Rectangle(0, -200, 1000, 1050);
+            backgroundRect= new Rectangle(-100, -300, 1000, 1050);
             Camera.Load(
                 _graphics.PreferredBackBufferWidth,  //screen width
                 _graphics.PreferredBackBufferHeight, //screen height
