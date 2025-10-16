@@ -148,12 +148,18 @@ namespace ScreamJamGame
                 new Vector2(400, 240),
                 Color.Black
             );
+            _spriteBatch.DrawString(
+                consolas24,
+                $"{backgroundRect.X},{backgroundRect.Y}",
+                new Vector2(400, 280),
+                Color.Black
+            );
             _spriteBatch.End();
 
             base.Draw(gameTime);
         }
         public static void BackgroundMove(Vector2 change)
-        {
+        { 
             backgroundRect.Y += (int)(change.Y / backgroundRect.Height * Camera.MaxHeight);
             backgroundRect.X += (int)(change.X / backgroundRect.Width * Camera.MaxWidth);
         }
