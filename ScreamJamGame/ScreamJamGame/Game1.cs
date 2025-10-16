@@ -34,6 +34,8 @@ namespace ScreamJamGame
         private SpriteFont consolas24;
         Texture2D background;
         private static Rectangle backgroundRect;
+        private static int worldWidth;
+        private static int worldHeight;
 
         public Game1()
         {
@@ -47,11 +49,13 @@ namespace ScreamJamGame
             // TODO: Add your initialization logic here
             buttons = new List<Button>();
             backgroundRect= new Rectangle(-100, -300, 1000, 1050);
+            worldWidth = backgroundRect.Width;
+            worldHeight = backgroundRect.Height;
             Camera.Load(
                 _graphics.PreferredBackBufferWidth,  //screen width
                 _graphics.PreferredBackBufferHeight, //screen height
-                1000,  //world width
-                1050);
+                worldWidth,  //world width
+                worldHeight);
             base.Initialize();
         }
 
@@ -66,13 +70,13 @@ namespace ScreamJamGame
 
 
             playerPos = new Vector2(_graphics.PreferredBackBufferWidth/2,_graphics.PreferredBackBufferHeight/2);
-            player = new Player(GraphicsDevice, playerPos, new Rectangle((int)playerPos.X, (int)playerPos.Y, 0, 0), temp);
+            player = new Player(_graphics, playerPos, new Rectangle((int)playerPos.X, (int)playerPos.Y, 0, 0), temp);
             {
 
             }
 
             background = Content.Load<Texture2D>("download (5)");
-            player.PlayerBounds = new Rectangle((int)player.PlayerPos.X, (int)player.PlayerPos.Y, 1000, 1050);
+            player.PlayerBounds = new Rectangle((int)player.PlayerPos.X, (int)player.PlayerPos.Y, 1, 50);
 
             // TODO: use this.Content to load your game content here
         }
@@ -111,8 +115,10 @@ namespace ScreamJamGame
             // TODO: Add your drawing code here
             _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
             _spriteBatch.Draw(background, backgroundRect, Color.White);
-            player.Draw(_spriteBatch);
+         
             myLevel.DisplayTiles();
+            player.Draw(_spriteBatch);
+
 
 
             foreach (Button button in buttons)

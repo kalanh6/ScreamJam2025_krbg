@@ -72,9 +72,9 @@ namespace ScreamJamGame
         }
 
         //Constructor for player
-        public Player (GraphicsDevice graphicsDevice, Vector2 position, Rectangle bounds, Texture2D texture) : base(bounds, texture)
+        public Player (GraphicsDeviceManager graphicsMgr, Vector2 position, Rectangle bounds, Texture2D texture) : base(bounds, texture)
         {
-            _graphicsDevice = graphicsDevice;
+            _graphicsManager = graphicsMgr;
             playerTexture = texture;
             playerPos = position;
             playerBounds = bounds;
@@ -88,7 +88,7 @@ namespace ScreamJamGame
             if (isAlive == true)
             {
                 keyState = Keyboard.GetState();
-                if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Left))
+                if (keyState.IsKeyDown(Keys.Left) && playerPos.X>50)
                 {
                     playerPos.X -= 2;
                     directionX = "left";
@@ -97,7 +97,7 @@ namespace ScreamJamGame
                 {
                     Camera.Update(new Vector2(2, 0));
                 }
-                if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Right))
+                if (keyState.IsKeyDown(Keys.Right) && playerPos.X < _graphicsManager.PreferredBackBufferWidth - 150)
                 {
                     playerPos.X += 2;
                     directionX = "right";
@@ -107,7 +107,7 @@ namespace ScreamJamGame
                     Camera.Update(new Vector2(-2, 0));
                 }
                 keyState = Keyboard.GetState();
-                if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Up))
+                if (keyState.IsKeyDown(Keys.Up) && playerPos.Y > 50)
                 {
                     playerPos.Y -= 2;
                     directionY = "up";
@@ -116,7 +116,7 @@ namespace ScreamJamGame
                 {
                     Camera.Update(new Vector2(0, 2));
                 }
-                if (keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Down))
+                if (keyState.IsKeyDown(Keys.Down) && playerPos.Y<_graphicsManager.PreferredBackBufferHeight-120)
                 {
                     playerPos.Y += 2;
                     directionY = "down";
