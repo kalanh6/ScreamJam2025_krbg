@@ -16,20 +16,12 @@ namespace ScreamJamGame
         private Texture2D enemyTexture;
 
         //Position fields
-        private Vector2 enemyPos;
         private Rectangle enemyBounds;
 
         //Class-specific fields
         private bool isStunned;
         private int stunTimer;
         private Player player;
-
-
-        public Vector2 EnemyPos
-        {
-            get { return enemyPos; }
-            set { enemyPos = value; }
-        }
 
         public Rectangle EnemyBounds
         {
@@ -49,9 +41,8 @@ namespace ScreamJamGame
             set { stunTimer = value; }
         }
 
-        public Enemy(GraphicsDevice graphicsDevice, Vector2 position, Rectangle bounds, Texture2D texture, Player player) : base (bounds, texture)
+        public Enemy(GraphicsDevice graphicsDevice, Rectangle bounds, Texture2D texture, Player player) : base (bounds, texture)
         {
-            enemyPos = position;
             enemyBounds = bounds;
             enemyTexture = texture;
             isStunned = false;
@@ -60,54 +51,30 @@ namespace ScreamJamGame
 
         public override void Update(GameTime gameTime)
         {
-            if (player.PlayerBounds.Intersects(enemyBounds) && player.IsAlive == true)
+            if (player.IsAlive == true && isStunned == false)
             {
-                player.IsAlive = false;
-            }
-            else if (player.IsAlive == true && isStunned == false)
-            {
-                string directionX;
-                string directionY;
-
-                if (enemyPos.X > player.PlayerPos.X)
+                if (player.PlayerBounds.Intersects(enemyBounds) && player.IsAlive == true)
                 {
-                    directionX = "left";
-                    enemyPos.X -= 1;
-                }
-                else if (enemyPos.X < player.PlayerPos.X)
-                {
-                    directionX = "right";
-                    enemyPos.X += 1;
+                    player.IsAlive = false;
                 }
 
-                if (enemyPos.Y > player.PlayerPos.Y)
+                if (enemyBounds.X > player.PlayerBounds.X)
                 {
-                    directionY = "up";
-                    enemyPos.Y -= 1;
+                    enemyBounds.X -= 1;
                 }
-                else if (enemyPos.Y < player.PlayerPos.Y)
+                else if (enemyBounds.X < player.PlayerBounds.X)
                 {
-                    directionY = "down";
-                    enemyPos.Y += 1;
+                    enemyBounds.X += 1;
                 }
 
-               /* if (directionX == "left")
+                if (enemyBounds.Y > player.PlayerBounds.Y)
                 {
-                    enemyPos.X -= 1;
+                    enemyBounds.Y -= 1;
                 }
-                else
+                else if (enemyBounds.Y < player.PlayerBounds.Y)
                 {
-                    enemyPos.X += 1;
+                    enemyBounds.Y += 1;
                 }
-
-                if (directionY == "up")
-                {
-                    enemyPos.Y -= 1;
-                }
-                else
-                {
-                    enemyPos.Y += 1;
-                }*/
             }
             else if (player.IsAlive == true && isStunned == true)
             {
@@ -124,7 +91,7 @@ namespace ScreamJamGame
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(enemyTexture, enemyPos ,Color.Blue);
+            spriteBatch.Draw(enemyTexture, enemyBounds, Color.Blue);
         }
     }
 }

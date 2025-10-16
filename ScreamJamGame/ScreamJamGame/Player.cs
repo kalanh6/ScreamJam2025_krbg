@@ -18,7 +18,6 @@ namespace ScreamJamGame
         private Texture2D playerTexture;
 
         //General fields for player stats and sizing
-        private Vector2 playerPos;
         private Rectangle playerBounds;
         private bool isAlive;
         private bool hasKey;
@@ -28,13 +27,6 @@ namespace ScreamJamGame
 
         //Player input
         private KeyboardState keyState;
-
-        //Position property
-        public Vector2 PlayerPos
-        {
-            get { return playerPos; }
-            set { playerPos = value; }
-        }
 
         //Bounds property
         public Rectangle PlayerBounds
@@ -72,11 +64,10 @@ namespace ScreamJamGame
         }
 
         //Constructor for player
-        public Player (GraphicsDeviceManager graphicsMgr, Vector2 position, Rectangle bounds, Texture2D texture) : base(bounds, texture)
+        public Player (GraphicsDeviceManager graphicsMgr, Rectangle bounds, Texture2D texture) : base(bounds, texture)
         {
             _graphicsManager = graphicsMgr;
             playerTexture = texture;
-            playerPos = position;
             playerBounds = bounds;
             isAlive = true;
             ammo = 3;
@@ -88,42 +79,42 @@ namespace ScreamJamGame
             if (isAlive == true)
             {
                 keyState = Keyboard.GetState();
-                if (keyState.IsKeyDown(Keys.Left) && playerPos.X>50)
+                if (keyState.IsKeyDown(Keys.Left) && playerBounds.X>50)
                 {
-                    playerPos.X -= 2;
+                    playerBounds.X -= 3;
                     directionX = "left";
                 }
                 if (keyState.IsKeyDown(Keys.Left)/* && position.X <= 0*/)
                 {
-                    Camera.Update(new Vector2(2, 0));
+                    Camera.Update(new Vector2(3, 0));
                 }
-                if (keyState.IsKeyDown(Keys.Right) && playerPos.X < _graphicsManager.PreferredBackBufferWidth - 150)
+                if (keyState.IsKeyDown(Keys.Right) && playerBounds.X < _graphicsManager.PreferredBackBufferWidth - 150)
                 {
-                    playerPos.X += 2;
+                    playerBounds.X += 3;
                     directionX = "right";
                 }
                 if (keyState.IsKeyDown(Keys.Right) /*&& position.X >= playerBounds.X*/)
                 {
-                    Camera.Update(new Vector2(-2, 0));
+                    Camera.Update(new Vector2(-3, 0));
                 }
                 keyState = Keyboard.GetState();
-                if (keyState.IsKeyDown(Keys.Up) && playerPos.Y > 50)
+                if (keyState.IsKeyDown(Keys.Up) && playerBounds.Y > 50)
                 {
-                    playerPos.Y -= 2;
+                    playerBounds.Y -= 3;
                     directionY = "up";
                 }
                 if (keyState.IsKeyDown(Keys.Up) && position.Y >= -500000000)
                 {
-                    Camera.Update(new Vector2(0, 2));
+                    Camera.Update(new Vector2(0, 3));
                 }
-                if (keyState.IsKeyDown(Keys.Down) && playerPos.Y<_graphicsManager.PreferredBackBufferHeight-120)
+                if (keyState.IsKeyDown(Keys.Down) && playerBounds.Y<_graphicsManager.PreferredBackBufferHeight-120)
                 {
-                    playerPos.Y += 2;
+                    playerBounds.Y += 3;
                     directionY = "down";
                 }
                 if (keyState.IsKeyDown(Keys.Down) && position.Y >= playerBounds.Y)
                 {
-                    Camera.Update(new Vector2(0, -2));
+                    Camera.Update(new Vector2(0, -3));
                 }
             }
         }
@@ -132,7 +123,7 @@ namespace ScreamJamGame
         {
             if (isAlive == true)
             {
-                spriteBatch.Draw(playerTexture, playerPos, Color.White);
+                spriteBatch.Draw(playerTexture, playerBounds, Color.White);
             }
         }
     }

@@ -22,9 +22,10 @@ namespace ScreamJamGame
         private SpriteBatch _spriteBatch;
         private Texture2D temp;
         private Player player;
+        private Projectile proj;
         private Enemy enemy;
-        private Vector2 playerPos;
-        private Vector2 enemyPos;
+        private Keycard keycard;
+        private Door door;
 
         private Level myLevel;
         private Texture2D spriteSheet;
@@ -70,23 +71,29 @@ namespace ScreamJamGame
             spriteSheet = Content.Load<Texture2D>("roguelikeSheet_transparent");
             myLevel = new Level(spriteSheet, "../../../Content/textureMappingData.txt", _spriteBatch);
 
+            state = GameState.Gameplay;
 
-            playerPos = new Vector2(_graphics.PreferredBackBufferWidth/2,_graphics.PreferredBackBufferHeight/2);
-            player = new Player(_graphics, playerPos, new Rectangle((int)playerPos.X, (int)playerPos.Y, 0, 0), temp);
-            {
+            buttons.Add(new Button(
+                new Rectangle(_graphics.PreferredBackBufferWidth / 2 - 76, 400, 150, 70), //_graphics.PreferredBackBufferWidth/2 - 76, 500,150,70
+                "START",
+                consolas24,
+                temp,
+                GameState.MainMenu,
+                GameState.Gameplay));
 
-            }
+           
+            player = new Player(_graphics, new Rectangle(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2, 25, 50), temp);
 
-            enemyPos = new Vector2(0,0);
-            enemy = new Enemy(GraphicsDevice, enemyPos, new Rectangle((int)enemyPos.X, (int)enemyPos.Y, 0, 0), temp, player);
-            {
+            proj = new Projectile(_graphics, new Rectangle(0, 0, 5, 5), temp, player, enemy);
+            
+            enemy = new Enemy(GraphicsDevice, new Rectangle(0, 0, 50, 100), temp, player);
 
-            }
+            keycard = new Keycard(_graphics, new Rectangle(50, 50, 10, 10), temp, player);
+
+            door = new Door(_graphics, temp, new Rectangle(_graphics.PreferredBackBufferWidth - 150, _graphics.PreferredBackBufferHeight / 2, 10, 50), player);
 
             background = Content.Load<Texture2D>("download (5)");
-            player.PlayerBounds = new Rectangle((int)player.PlayerPos.X, (int)player.PlayerPos.Y, 1, 50);
-
-            enemy.EnemyBounds = new Rectangle((int)enemy.EnemyPos.X, (int)enemy.EnemyPos.Y, 100, 150);
+            
 
             // TODO: use this.Content to load your game content here
         }
@@ -97,24 +104,31 @@ namespace ScreamJamGame
                 Exit();
 
             // TODO: Add your update logic here
-            player.Update(gameTime);
-            enemy.Update(gameTime);
+            switch (state)
+            {
+                case GameState.Gameplay:
+                    player.Update(gameTime);
+                    proj.Update(gameTime);
+                    enemy.Update(gameTime);
+                    keycard.Update(gameTime);
+                    door.Update(gameTime);
+                    if (player.IsAlive == false)
+                        state = GameState.Lose;
+                    if (door.Opened == true)
+                        state = GameState.Win;
+                    break;
+            }
 
             foreach (Button button in buttons)
             {
                 if (button.ActiveState == state)
                 {
                     button.Update();
+                    
                 }
             }
 
-            buttons.Add(new Button(
-                new Rectangle(_graphics.PreferredBackBufferWidth / 2 - 76, 400, 150, 70), //_graphics.PreferredBackBufferWidth/2 - 76, 500,150,70
-                "START",
-                consolas24,
-                temp,
-                GameState.MainMenu,
-                GameState.MainMenu));
+            
 
             base.Update(gameTime);
         }
@@ -125,15 +139,28 @@ namespace ScreamJamGame
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
-            _spriteBatch.Draw(background, backgroundRect, Color.White);
-
-         
-            myLevel.DisplayTiles();
-            player.Draw(_spriteBatch);
-            enemy.Draw(_spriteBatch);
-
             
-
+            switch(state)
+            {
+                case GameState.MainMenu:
+                    GraphicsDevice.Clear(Color.White);
+                    break;
+                case GameState.Gameplay:
+                    _spriteBatch.Draw(background, backgroundRect, Color.White);
+                    myLevel.DisplayTiles();
+                    player.Draw(_spriteBatch);
+                    proj.Draw(_spriteBatch);
+                    enemy.Draw(_spriteBatch);
+                    keycard.Draw(_spriteBatch);
+                    door.Draw(_spriteBatch);
+                    break;
+                case GameState.Lose:
+                    GraphicsDevice.Clear(Color.White);
+                    break;
+                case GameState.Win:
+                    GraphicsDevice.Clear(Color.White);
+                    break;
+            }
 
             foreach (Button button in buttons)
             {
@@ -142,12 +169,20 @@ namespace ScreamJamGame
                     button.Draw(_spriteBatch);
                 }
             }
+            /*
             _spriteBatch.DrawString(
                 consolas24,
                 $"{player.PlayerPos.X},{player.PlayerPos.Y}",
                 new Vector2(400, 240),
                 Color.Black
             );
+            _spriteBatch.DrawString(
+                consolas24,
+                $"{keycard.KeycardBounds.X},{keycard.KeycardBounds.Y}",
+                new Vector2(400, 280),
+                Color.Black
+            );
+            */
             _spriteBatch.End();
 
             base.Draw(gameTime);

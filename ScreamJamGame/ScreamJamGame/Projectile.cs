@@ -17,7 +17,6 @@ namespace ScreamJamGame
         private Texture2D projTexture;
 
         //Position fields
-        private Vector2 projPos;
         private Rectangle projBounds;
 
         //Class-specific fields
@@ -27,8 +26,9 @@ namespace ScreamJamGame
         private Enemy enemy;
         private MouseState prevMState;
 
-        public Projectile(GraphicsDevice graphicsDevice, Rectangle bounds, Texture2D texture, Player player, Enemy enemy) : base(bounds, texture)
+        public Projectile(GraphicsDeviceManager graphicsMgr, Rectangle bounds, Texture2D texture, Player player, Enemy enemy) : base(bounds, texture)
         {
+            _graphicsManager = graphicsMgr;
             projBounds = bounds;
             projTexture = texture;
             firing = false;
@@ -42,9 +42,11 @@ namespace ScreamJamGame
             if (firing = false && prevMState.LeftButton == ButtonState.Pressed && mState.LeftButton == ButtonState.Released)
             {
                 firing = true;
+                projBounds.X = player.PlayerBounds.X;
+                projBounds.Y = player.PlayerBounds.Y;
                 travelTime = 20;
                 player.Ammo -= 1;
-                projPos = player.PlayerPos;
+                
             }
             else if(firing == true && projBounds.Intersects(enemy.EnemyBounds))
             {
@@ -60,20 +62,20 @@ namespace ScreamJamGame
             {
                 if (player.DirectionX == "left")
                 {
-                    projPos.X -= 5;
+                    projBounds.X -= 5;
                 }
                 else if (player.DirectionX == "right")
                 {
-                    projPos.X += 5;
+                    projBounds.X += 5;
                 }
 
                 if (player.DirectionY == "up")
                 {
-                    projPos.Y -= 5;
+                    projBounds.Y -= 5;
                 }
                 else if (player.DirectionY == "down")
                 {
-                    projPos.Y += 5;
+                    projBounds.Y += 5;
                 }
 
                 travelTime -= 1;

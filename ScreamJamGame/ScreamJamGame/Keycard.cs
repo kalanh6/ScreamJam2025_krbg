@@ -14,15 +14,19 @@ namespace ScreamJamGame
         private GraphicsDevice _graphicsDevice;
         private Texture2D keycardTexture;
 
-        private Vector2 keycardPos;
         private Rectangle keycardBounds;
 
         private bool collected;
         private Player player;
 
-        public Keycard(GraphicsDevice graphicsDevice, Vector2 position, Rectangle bounds, Texture2D texture, Player player) : base (bounds, texture)
+        public Rectangle KeycardBounds
         {
-            keycardPos = position;
+            get { return keycardBounds; }
+        }
+
+        public Keycard(GraphicsDeviceManager graphicsMgr, Rectangle bounds, Texture2D texture, Player player) : base (bounds, texture)
+        {
+            _graphicsManager = graphicsMgr;
             keycardBounds = bounds;
             keycardTexture = texture;
             collected = false;
