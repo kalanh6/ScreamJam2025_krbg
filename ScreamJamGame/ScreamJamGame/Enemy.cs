@@ -24,9 +24,17 @@ namespace ScreamJamGame
         private int stunTimer;
         private Player player;
 
+
+        public Vector2 EnemyPos
+        {
+            get { return enemyPos; }
+            set { enemyPos = value; }
+        }
+
         public Rectangle EnemyBounds
         {
             get { return enemyBounds; }
+            set { enemyBounds = value; }
         }
 
         public bool IsStunned
@@ -64,22 +72,26 @@ namespace ScreamJamGame
                 if (enemyPos.X > player.PlayerPos.X)
                 {
                     directionX = "left";
+                    enemyPos.X -= 1;
                 }
-                else
+                else if (enemyPos.X < player.PlayerPos.X)
                 {
                     directionX = "right";
+                    enemyPos.X += 1;
                 }
 
                 if (enemyPos.Y > player.PlayerPos.Y)
                 {
                     directionY = "up";
+                    enemyPos.Y -= 1;
                 }
-                else
+                else if (enemyPos.Y < player.PlayerPos.Y)
                 {
                     directionY = "down";
+                    enemyPos.Y += 1;
                 }
 
-                if (directionX == "left")
+               /* if (directionX == "left")
                 {
                     enemyPos.X -= 1;
                 }
@@ -95,7 +107,7 @@ namespace ScreamJamGame
                 else
                 {
                     enemyPos.Y += 1;
-                }
+                }*/
             }
             else if (player.IsAlive == true && isStunned == true)
             {
@@ -112,7 +124,7 @@ namespace ScreamJamGame
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(enemyTexture, enemyBounds, Color.White);
+            spriteBatch.Draw(enemyTexture, enemyPos ,Color.Blue);
         }
     }
 }
