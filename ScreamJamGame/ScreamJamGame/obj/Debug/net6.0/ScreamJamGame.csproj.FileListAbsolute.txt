@@ -91,3 +91,7 @@ D:\Profiles\kjh8438\Documents\GitHub\ScreamJam2025_krbg\ScreamJamGame\ScreamJamG
 D:\Profiles\kjh8438\Documents\GitHub\ScreamJam2025_krbg\ScreamJamGame\ScreamJamGame\obj\Debug\net6.0\ScreamJamGame.pdb
 D:\Profiles\kjh8438\Documents\GitHub\ScreamJam2025_krbg\ScreamJamGame\ScreamJamGame\obj\Debug\net6.0\ScreamJamGame.genruntimeconfig.cache
 D:\Profiles\kjh8438\Documents\GitHub\ScreamJam2025_krbg\ScreamJamGame\ScreamJamGame\obj\Debug\net6.0\ref\ScreamJamGame.dll
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\download (5).xnb
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\level1.csv
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\roguelikeSheet_transparent.xnb
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\textureMappingData.txt

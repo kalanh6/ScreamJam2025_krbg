@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\ajd40\\desktop\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|solutionrelative:screamjamgame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\ajd40\\desktop\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\keycard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|solutionrelative:screamjamgame\\keycard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\ajd40\\desktop\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|solutionrelative:screamjamgame\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\ajd40\\desktop\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|solutionrelative:screamjamgame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\ajd40\\desktop\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\ajd40\\desktop\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\leveltile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|solutionrelative:screamjamgame\\leveltile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\ajd40\\desktop\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\keycard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|solutionrelative:screamjamgame\\keycard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB6789D5-905D-4423-BCCF-F45A57F9B8FC}|ScreamJamGame\\ScreamJamGame.csproj|c:\\users\\ajd40\\desktop\\screamjam2025_krbg\\screamjamgame\\screamjamgame\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
@@ -70,8 +70,8 @@
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Enemy.cs",
               "RelativeDocumentMoniker": "ScreamJamGame\\Enemy.cs",
-              "ToolTip": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Enemy.cs*",
-              "RelativeToolTip": "ScreamJamGame\\Enemy.cs*",
+              "ToolTip": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Enemy.cs",
+              "RelativeToolTip": "ScreamJamGame\\Enemy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAH4AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T21:06:08.955Z",
@@ -91,12 +91,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Game1.cs",
               "RelativeDocumentMoniker": "ScreamJamGame\\Game1.cs",
-              "ToolTip": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Game1.cs*",
-              "RelativeToolTip": "ScreamJamGame\\Game1.cs*",
+              "ToolTip": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Game1.cs",
+              "RelativeToolTip": "ScreamJamGame\\Game1.cs",
               "ViewState": "AgIAAGkAAAAAAAAAAAAowHAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T21:06:08.971Z",
@@ -104,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Door.cs",
               "DocumentMoniker": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Door.cs",
               "RelativeDocumentMoniker": "ScreamJamGame\\Door.cs",
@@ -117,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Player.cs",
               "RelativeDocumentMoniker": "ScreamJamGame\\Player.cs",
@@ -130,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LevelTile.cs",
               "DocumentMoniker": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\LevelTile.cs",
               "RelativeDocumentMoniker": "ScreamJamGame\\LevelTile.cs",
@@ -155,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Keycard.cs",
               "DocumentMoniker": "C:\\Users\\ajd40\\Desktop\\ScreamJam2025_krbg\\ScreamJamGame\\ScreamJamGame\\Keycard.cs",
               "RelativeDocumentMoniker": "ScreamJamGame\\Keycard.cs",
