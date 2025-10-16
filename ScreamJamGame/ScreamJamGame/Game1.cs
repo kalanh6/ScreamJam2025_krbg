@@ -22,7 +22,9 @@ namespace ScreamJamGame
         private SpriteBatch _spriteBatch;
         private Texture2D temp;
         private Player player;
+        private Enemy enemy;
         private Vector2 playerPos;
+        private Vector2 enemyPos;
 
         private Level myLevel;
         private Texture2D spriteSheet;
@@ -75,19 +77,28 @@ namespace ScreamJamGame
 
             }
 
+            enemyPos = new Vector2(0,0);
+            enemy = new Enemy(GraphicsDevice, enemyPos, new Rectangle((int)enemyPos.X, (int)enemyPos.Y, 0, 0), temp, player);
+            {
+
+            }
+
             background = Content.Load<Texture2D>("download (5)");
             player.PlayerBounds = new Rectangle((int)player.PlayerPos.X, (int)player.PlayerPos.Y, 1, 50);
+
+            enemy.EnemyBounds = new Rectangle((int)enemy.EnemyPos.X, (int)enemy.EnemyPos.Y, 100, 150);
 
             // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Escape))
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
             // TODO: Add your update logic here
             player.Update(gameTime);
+            enemy.Update(gameTime);
 
             foreach (Button button in buttons)
             {
@@ -103,7 +114,7 @@ namespace ScreamJamGame
                 consolas24,
                 temp,
                 GameState.MainMenu,
-                GameState.Gameplay));
+                GameState.MainMenu));
 
             base.Update(gameTime);
         }
@@ -115,10 +126,13 @@ namespace ScreamJamGame
             // TODO: Add your drawing code here
             _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
             _spriteBatch.Draw(background, backgroundRect, Color.White);
+
          
             myLevel.DisplayTiles();
             player.Draw(_spriteBatch);
+            enemy.Draw(_spriteBatch);
 
+            
 
 
             foreach (Button button in buttons)
