@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ScreamJamGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f145fc05bb73c3918a72ba5780bf6ac20790e963")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c567080c61680b98a5b448aa74ab14c453ca0e57")]
 [assembly: System.Reflection.AssemblyProductAttribute("ScreamJamGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ScreamJamGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
