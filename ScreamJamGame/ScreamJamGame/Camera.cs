@@ -42,16 +42,16 @@ namespace ScreamJamGame
             _screenHeight = screenHeight;
             _worldWidth = worldWidth;
             _worldHeight = worldHeight;
-            _position = new Vector2(0, 0);
+            _position = new Vector2(-100, -300);
         }
 
         public static void Update(Vector2 direction)
         {
-            /*if (!((_position.Y <= 0 && direction.Y < 0) || (_position.Y >= _worldHeight && direction.Y > 0)||(_position.X<=0 && direction.X<0)|| (_position.X >= _worldHeight && direction.X > 0)))
-            {*/
+            if (!(((_position.Y <= -500 && direction.Y < 0) || (_position.Y >= _worldHeight && direction.Y > 0))||(_position.X<=-500 && direction.X<0)|| (_position.X >= _worldHeight && direction.X > 0)))
+            {
                 _position += direction;
                 Game1.BackgroundMove(direction);
-            /*}*/
+            }
         }
     }
 }
