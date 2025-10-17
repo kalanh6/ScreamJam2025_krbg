@@ -1,1 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><SourceFile>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/temp.png</SourceFile><SourceTime>2025-10-09T17:54:14.3476957-04:00</SourceTime><DestFile>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/bin/DesktopGL/Content/temp.xnb</DestFile><DestTime>2025-10-16T20:56:13.6810642-04:00</DestTime><Importer>TextureImporter</Importer><ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime><Processor>TextureProcessor</Processor><ProcessorTime>2022-07-26T07:44:56-04:00</ProcessorTime><Parameters><Key>ColorKeyColor</Key><Value>255,0,255,255</Value></Parameters><Parameters><Key>ColorKeyEnabled</Key><Value>True</Value></Parameters><Parameters><Key>GenerateMipmaps</Key><Value>False</Value></Parameters><Parameters><Key>PremultiplyAlpha</Key><Value>True</Value></Parameters><Parameters><Key>ResizeToPowerOfTwo</Key><Value>False</Value></Parameters><Parameters><Key>MakeSquare</Key><Value>False</Value></Parameters><Parameters><Key>TextureFormat</Key><Value>Color</Value></Parameters><Dependencies /><BuildAsset /><BuildOutput /></PipelineBuildEvent>
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/glgal/OneDrive/Documents/ScreamJam/ScreamJamGame/ScreamJamGame/Content/temp.png</SourceFile>
+  <SourceTime>2025-10-15T15:23:58.5391516-04:00</SourceTime>
+  <DestFile>C:/Users/glgal/OneDrive/Documents/ScreamJam/ScreamJamGame/ScreamJamGame/Content/bin/DesktopGL/Content/temp.xnb</DestFile>
+  <DestTime>2025-10-17T01:53:29.847158-04:00</DestTime>
+  <Importer>TextureImporter</Importer>
+  <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
+  <Processor>TextureProcessor</Processor>
+  <ProcessorTime>2022-07-26T07:44:56-04:00</ProcessorTime>
+  <Parameters>
+    <Key>ColorKeyColor</Key>
+    <Value>255,0,255,255</Value>
+  </Parameters>
+  <Parameters>
+    <Key>ColorKeyEnabled</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>GenerateMipmaps</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>ResizeToPowerOfTwo</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Parameters>
+    <Key>MakeSquare</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Color</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

@@ -93,5 +93,11 @@ namespace ScreamJamGame
         {
             spriteBatch.Draw(enemyTexture, enemyBounds, Color.White);
         }
+
+        public void Reset(Vector2 newPosition)
+        {
+            enemyBounds.X = (int)newPosition.X;
+            enemyBounds.Y = (int)newPosition.Y;
+        }
     }
 }

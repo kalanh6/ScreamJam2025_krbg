@@ -97,6 +97,27 @@ namespace ScreamJamGame
                 temp,
                 GameState.MainMenu,
                 GameState.Gameplay));
+            buttons.Add(new Button(
+                new Rectangle(_graphics.PreferredBackBufferWidth / 3 - 76, 400, 150, 70), //_graphics.PreferredBackBufferWidth/2 - 76, 500,150,70
+                "RETRY",
+                consolas24,
+                temp,
+                GameState.Lose,
+                GameState.Gameplay));
+            buttons.Add(new Button(
+                new Rectangle(_graphics.PreferredBackBufferWidth / 3 * 2- 76, 400, 150, 70), //_graphics.PreferredBackBufferWidth/2 - 76, 500,150,70
+                "MAIN MENU",
+                consolas24,
+                temp,
+                GameState.Lose,
+                GameState.MainMenu));
+            buttons.Add(new Button(
+                new Rectangle(_graphics.PreferredBackBufferWidth / 2 - 76, 400, 150, 70), //_graphics.PreferredBackBufferWidth/2 - 76, 500,150,70
+                "MAIN MENU",
+                consolas24,
+                temp,
+                GameState.Win,
+                GameState.MainMenu));
 
             foreach (Button button in buttons)
             {

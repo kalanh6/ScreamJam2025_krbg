@@ -136,3 +136,14 @@ C:\Users\kalan\OneDrive\Documents\GitHub\ScreamJam2025_krbg\ScreamJamGame\Scream
 C:\Users\kalan\OneDrive\Documents\GitHub\ScreamJam2025_krbg\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\TableL.xnb
 C:\Users\kalan\OneDrive\Documents\GitHub\ScreamJam2025_krbg\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\TableR.xnb
 C:\Users\kalan\OneDrive\Documents\GitHub\ScreamJam2025_krbg\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\Wall.xnb
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\DoorOff.xnb
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\DoorOn.xnb
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\Floor.xnb
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\Keycard.xnb
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\Monster.xnb
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\Player.xnb
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\TableEmpty.xnb
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\TableFull.xnb
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\TableL.xnb
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\TableR.xnb
+C:\Users\glgal\OneDrive\Documents\ScreamJam\ScreamJamGame\ScreamJamGame\bin\Debug\net6.0\Content\Wall.xnb
