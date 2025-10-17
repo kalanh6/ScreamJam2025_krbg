@@ -36,7 +36,7 @@ namespace ScreamJamGame
             _worldHeight = height;
             _worldWidth = width;
             _position.Y = (int)(playerCords.Y / 1.5);
-            _position.Y = (int)(playerCords.X / 1.5);
+            _position.X = (int)(playerCords.X / 1.5);
         }
 
         public static void Load(int screenWidth, int screenHeight, int worldWidth, int worldHeight)
@@ -45,7 +45,7 @@ namespace ScreamJamGame
             _screenHeight = screenHeight;
             _worldWidth = worldWidth;
             _worldHeight = worldHeight;
-            _position = new Vector2(-100, -300);
+            _position = new Vector2(500, -1200);
         }
 
         public static void Update(Vector2 direction)
@@ -53,12 +53,12 @@ namespace ScreamJamGame
             if (!(((_position.Y <= -500 && direction.Y < 0) || (_position.Y >= _worldHeight && direction.Y > 0))||(_position.X<=-500 && direction.X<0)|| (_position.X >= _worldHeight && direction.X > 0)))
             {
                 _position += direction;
-                Game1.BackgroundMove(direction);
+                //Game1.BackgroundMove(direction);
             }
         }
         public static void Reset()
         {
-            _position = new Vector2(-100, -300);
+            _position = new Vector2(500, -1200);
         }
     }
 }

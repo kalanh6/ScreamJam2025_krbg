@@ -132,12 +132,12 @@ namespace ScreamJamGame
         }
         public void Reset(Vector2 newPosition)
         {
-            position.X = (int)newPosition.X;
-            position.Y = (int)newPosition.Y;
-            if (position.Y >= windowHeight)
-            {
-                position.Y = windowHeight - 100;
-            }
+            playerBounds.X = (int)newPosition.X;
+            playerBounds.Y = (int)newPosition.Y;
+            //if (playerBounds.Y >= windowHeight)
+            //{
+            //    playerBounds.Y = windowHeight - 100;
+            //}
             isAlive = true;
         }
     }

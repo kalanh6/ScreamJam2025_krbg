@@ -8,8 +8,8 @@ e,door
 k, keycard
 l, table left
 r, table right
-2000, level width
-1200, level height
+1000, level width
+600, level height
 
 0000000000000000000000
 0--x-------------k---0

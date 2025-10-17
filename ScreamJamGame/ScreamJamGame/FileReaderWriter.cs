@@ -75,45 +75,48 @@ public static class FileReaderWriter
                 if (map[y][x] == reference[0])
                 {
                     //add to enemy list
-                    floorTiles.Add(new Vector2(x * 100, y * 100));
+                    floorTiles.Add(new Vector2(x * 50, y * 50));
                 }
                 else if (map[y][x] == reference[1])
                 {
                     //add to meteor list
-                    enemy.Add(new Vector2(x * 100, y * 100));
+                    enemy.Add(new Vector2(x * 50, y * 50));
+                    floorTiles.Add(new Vector2(x * 50, y * 50));
                 }
                 else if (map[y][x] == reference[2])
                 {
-                    walls.Add(new Vector2(x * 100, y * 100));
+                    walls.Add(new Vector2(x * 50, y * 50));
                 }
                 else if (map[y][x] == reference[3])
                 {
-                    tables.Add(new Vector2(x * 100, y * 100));
+                    tables.Add(new Vector2(x * 50, y * 50));
                 }
                 else if (map[y][x] == reference[4])
                 {
-                    tableS.Add(new Vector2(x * 100, y * 100));
+                    tableS.Add(new Vector2(x * 50, y * 50));
                 }
                 else if (map[y][x] == reference[5])
                 {
                     //send player coordinates
-                    playerCords = new Vector2(x * 100, y * 100);
+                    playerCords = new Vector2(x * 50, y * 50);
+                    floorTiles.Add(new Vector2(x * 50, y * 50));
                 }
                 else if (map[y][x] == reference[6])
                 {
-                   door.Add(new Vector2(x * 100, y * 100));
+                   door.Add(new Vector2(x * 50, y * 50));
                 }
                 else if (map[y][x] == reference[7])
                 {
-                    keycard.Add(new Vector2(x * 100, y * 100));
+                    keycard.Add(new Vector2(x * 50, y * 50));
+                    floorTiles.Add(new Vector2(x * 50, y * 50));
                 }
                 else if (map[y][x] == reference[8])
                 {
-                    tableL.Add(new Vector2(x * 100, y * 100));
+                    tableL.Add(new Vector2(x * 50, y * 50));
                 }
                 else if (map[y][x] == reference[9])
                 {
-                    tableR.Add(new Vector2(x * 100, y * 100));
+                    tableR.Add(new Vector2(x * 50, y * 50));
                 }
             }
 
@@ -123,7 +126,8 @@ public static class FileReaderWriter
         //record enemies & asteroids(positions only, size will be constant), send it to enemy manager. [static class]
         //record player starting position and send it to game1
         //      [could be sent as a return value since it will be called in game 1].
-        //EnemyManager.fileLoad(enemies, meteors);
+        TileManager.fileLoad(floorTiles);
+        ObjectManager.fileLoad(tables, tableR,tableS,tableL,walls);
         Camera.fileLoad(width, height, playerCords);
         reader.Close();
         return playerCords;

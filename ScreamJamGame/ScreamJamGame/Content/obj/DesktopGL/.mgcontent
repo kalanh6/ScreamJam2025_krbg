@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Profile>Reach</Profile>
-  <Platform>DesktopGL</Platform>
-  <Config />
-  <SourceFiles>
-    <File>C:/Users/ajd40/Desktop/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/consolas-24.spritefont</File>
-    <File>C:/Users/ajd40/Desktop/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/download (5).jpg</File>
-    <File>C:/Users/ajd40/Desktop/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/roguelikeSheet_transparent.png</File>
-    <File>C:/Users/ajd40/Desktop/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/temp.png</File>
-  </SourceFiles>
-  <DestFiles>
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-  </DestFiles>
-</SourceFileCollection>
+<?xml version="1.0" encoding="utf-8"?><SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Profile>Reach</Profile><Platform>DesktopGL</Platform><Config /><SourceFiles><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/consolas-24.spritefont</File><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/DoorOff.PNG</File><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/DoorOn.PNG</File><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/download (5).jpg</File><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/Floor.PNG</File><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/Keycard.PNG</File><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/Monster.PNG</File><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/Player.PNG</File><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/TableEmpty.PNG</File><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/TableFull.PNG</File><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/TableL.PNG</File><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/TableR.PNG</File><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/temp.png</File><File>C:/Users/kalan/OneDrive/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/Wall.PNG</File></SourceFiles><DestFiles><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /></DestFiles></SourceFileCollection>

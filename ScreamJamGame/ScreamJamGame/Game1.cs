@@ -29,13 +29,23 @@ namespace ScreamJamGame
         private Door door;
 
         private Texture2D spriteSheet;
+        private Texture2D table;
+        private Texture2D tableR;
+        private Texture2D tableL;
+        private Texture2D tableS;
+        private Texture2D wall;
+        private Texture2D playerTexture;
+        private Texture2D enemyTexture;
+        private Texture2D tileTexture;
+
+
 
 
         private GameState state;
 
         private List<Button> buttons;
         private SpriteFont consolas24;
-        Texture2D background;
+        //Texture2D background;
         private static Rectangle backgroundRect;
         private static int worldWidth;
         private static int worldHeight;
@@ -51,14 +61,15 @@ namespace ScreamJamGame
         {
             // TODO: Add your initialization logic here
             buttons = new List<Button>();
-            backgroundRect= new Rectangle(-100, -300, 1000, 1050);
-            worldWidth = backgroundRect.Width;
-            worldHeight = backgroundRect.Height;
+            
+            worldWidth = 1000;
+            worldHeight = 600;
             Camera.Load(
                 _graphics.PreferredBackBufferWidth,  //screen width
                 _graphics.PreferredBackBufferHeight, //screen height
                 worldWidth,  //world width
                 worldHeight);
+            backgroundRect = new Rectangle(0, -1200, Camera.MaxWidth, Camera.MaxHeight);
             base.Initialize();
         }
 
@@ -66,12 +77,19 @@ namespace ScreamJamGame
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             temp = Content.Load<Texture2D>("temp");
+            playerTexture = Content.Load<Texture2D>("Player");
+            enemyTexture = Content.Load<Texture2D>("Monster");
             consolas24 = Content.Load<SpriteFont>("consolas-24");
-
-            spriteSheet = Content.Load<Texture2D>("roguelikeSheet_transparent");
+            table = Content.Load<Texture2D>("TableEmpty");
+            tableS = Content.Load<Texture2D>("TableFull");
+            tableR = Content.Load<Texture2D>("TableR");
+            tableL = Content.Load<Texture2D>("TableL");
+            wall = Content.Load<Texture2D>("Wall");
+            tileTexture = Content.Load<Texture2D>("Floor");
 
             state = GameState.MainMenu;
-
+            TileManager.LoadContent(tileTexture);
+            ObjectManager.LoadContent(table,tableR,tableL,tableS,wall);
             buttons.Add(new Button(
                 new Rectangle(_graphics.PreferredBackBufferWidth / 2 - 76, 400, 150, 70), //_graphics.PreferredBackBufferWidth/2 - 76, 500,150,70
                 "START",
@@ -86,17 +104,17 @@ namespace ScreamJamGame
             }
 
 
-            player = new Player(_graphics, new Rectangle(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2, 25, 50), temp, _graphics.PreferredBackBufferWidth-100, _graphics.PreferredBackBufferHeight - 100);
+            player = new Player(_graphics, new Rectangle(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2, 50, 50), playerTexture, _graphics.PreferredBackBufferWidth-100, _graphics.PreferredBackBufferHeight - 100);
 
             proj = new Projectile(_graphics, new Rectangle(0, 0, 5, 5), temp, player, enemy);
             
-            enemy = new Enemy(GraphicsDevice, new Rectangle(0, 0, 50, 100), temp, player);
+            enemy = new Enemy(GraphicsDevice, new Rectangle(0, 0, 100, 100), enemyTexture, player);
 
             keycard = new Keycard(_graphics, new Rectangle(50, 50, 10, 10), temp, player);
 
             door = new Door(_graphics, temp, new Rectangle(_graphics.PreferredBackBufferWidth - 150, _graphics.PreferredBackBufferHeight / 2, 10, 50), player);
 
-            background = Content.Load<Texture2D>("download (5)");
+            //background = Content.Load<Texture2D>("download (5)");
             
 
             // TODO: use this.Content to load your game content here
@@ -141,7 +159,7 @@ namespace ScreamJamGame
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Red);
+           GraphicsDevice.Clear(Color.Red);
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
@@ -160,7 +178,9 @@ namespace ScreamJamGame
 
                     break;
                 case GameState.Gameplay:
-                    _spriteBatch.Draw(background, backgroundRect, Color.White);
+                    //_spriteBatch.Draw(background, backgroundRect, Color.White);
+                    TileManager.Draw(_spriteBatch);
+                    ObjectManager.Draw(_spriteBatch);
                     player.Draw(_spriteBatch);
                     proj.Draw(_spriteBatch);
                     enemy.Draw(_spriteBatch);
@@ -176,13 +196,14 @@ namespace ScreamJamGame
             }
 
            
-            /*
+            
             _spriteBatch.DrawString(
                 consolas24,
-                $"{player.PlayerPos.X},{player.PlayerPos.Y}",
+                $"{player.PlayerBounds.X},{player.PlayerBounds.Y}",
                 new Vector2(400, 240),
                 Color.Black
             );
+            /*
             _spriteBatch.DrawString(
                 consolas24,
                 $"{keycard.KeycardBounds.X},{keycard.KeycardBounds.Y}",
@@ -200,29 +221,27 @@ namespace ScreamJamGame
 
             base.Draw(gameTime);
         }
-        public static void BackgroundMove(Vector2 change)
+        /*public static void BackgroundMove(Vector2 change)
         { 
             backgroundRect.Y += (int)(change.Y / backgroundRect.Height * Camera.MaxHeight);
             backgroundRect.X += (int)(change.X / backgroundRect.Width * Camera.MaxWidth);
-        }
+        }*/
         public void Transition(GameState newState)
         {
             GameState tempState = state;
             state = newState;
 
-           /* if (newState == GameState.Gameplay)
+            if (newState == GameState.Gameplay)
             {
                 if (tempState != GameState.Lose)
                 {
 
-                }*/
+                }
                 player.Reset(FileReaderWriter.LoadLevel());
                 Camera.Reset();
-              /*
-                Enemy.Reset()
-                ProjectileManager.Clear();
-                backgroundRect.Y = 0 - backgroundRect.Height + _graphics.PreferredBackBufferHeight;
-            }*/
+                //ProjectileManager.Clear();
+                //backgroundRect.Y = 0 - backgroundRect.Height + _graphics.PreferredBackBufferHeight;
+            }
             /*if (newState == GameState.MainMenu && tempState != GameState.Credits)
             {
 

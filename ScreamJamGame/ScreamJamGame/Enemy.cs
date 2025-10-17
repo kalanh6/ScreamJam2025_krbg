@@ -91,7 +91,7 @@ namespace ScreamJamGame
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(enemyTexture, enemyBounds, Color.Blue);
+            spriteBatch.Draw(enemyTexture, enemyBounds, Color.White);
         }
     }
 }
