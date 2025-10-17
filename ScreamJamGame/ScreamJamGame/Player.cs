@@ -24,6 +24,8 @@ namespace ScreamJamGame
         private int ammo;
         private string directionX;
         private string directionY;
+        private int windowWidth;
+        private int windowHeight;
 
         //Player input
         private KeyboardState keyState;
@@ -64,7 +66,7 @@ namespace ScreamJamGame
         }
 
         //Constructor for player
-        public Player (GraphicsDeviceManager graphicsMgr, Rectangle bounds, Texture2D texture) : base(bounds, texture)
+        public Player (GraphicsDeviceManager graphicsMgr, Rectangle bounds, Texture2D texture, int width, int height) : base(bounds, texture)
         {
             _graphicsManager = graphicsMgr;
             playerTexture = texture;
@@ -72,6 +74,8 @@ namespace ScreamJamGame
             isAlive = true;
             ammo = 3;
             hasKey = false;
+            windowWidth = width;
+            windowHeight= height;
         }
 
         public override void Update (GameTime gameTime)
@@ -125,6 +129,16 @@ namespace ScreamJamGame
             {
                 spriteBatch.Draw(playerTexture, playerBounds, Color.White);
             }
+        }
+        public void Reset(Vector2 newPosition)
+        {
+            position.X = (int)newPosition.X;
+            position.Y = (int)newPosition.Y;
+            if (position.Y >= windowHeight)
+            {
+                position.Y = windowHeight - 100;
+            }
+            isAlive = true;
         }
     }
 }

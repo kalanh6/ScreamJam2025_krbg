@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using Skill_Issue_Game;
+using System;
+using System.Collections.Generic;
 
 namespace ScreamJamGame
 {
-    internal enum GameState
+    public enum GameState
     {
         MainMenu,
         Gameplay,
@@ -27,7 +28,6 @@ namespace ScreamJamGame
         private Keycard keycard;
         private Door door;
 
-        private Level myLevel;
         private Texture2D spriteSheet;
 
 
@@ -69,9 +69,8 @@ namespace ScreamJamGame
             consolas24 = Content.Load<SpriteFont>("consolas-24");
 
             spriteSheet = Content.Load<Texture2D>("roguelikeSheet_transparent");
-            myLevel = new Level(spriteSheet, "../../../Content/textureMappingData.txt", _spriteBatch);
 
-            state = GameState.Gameplay;
+            state = GameState.MainMenu;
 
             buttons.Add(new Button(
                 new Rectangle(_graphics.PreferredBackBufferWidth / 2 - 76, 400, 150, 70), //_graphics.PreferredBackBufferWidth/2 - 76, 500,150,70
@@ -81,8 +80,13 @@ namespace ScreamJamGame
                 GameState.MainMenu,
                 GameState.Gameplay));
 
-           
-            player = new Player(_graphics, new Rectangle(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2, 25, 50), temp);
+            foreach (Button button in buttons)
+            {
+                button.ButtonEvent += this.Transition;
+            }
+
+
+            player = new Player(_graphics, new Rectangle(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2, 25, 50), temp, _graphics.PreferredBackBufferWidth-100, _graphics.PreferredBackBufferHeight - 100);
 
             proj = new Projectile(_graphics, new Rectangle(0, 0, 5, 5), temp, player, enemy);
             
@@ -103,6 +107,16 @@ namespace ScreamJamGame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            foreach (Button button in buttons)
+            {
+                if (button.ActiveState == state)
+                {
+                    button.Update();
+
+                }
+            }
+
+
             // TODO: Add your update logic here
             switch (state)
             {
@@ -119,15 +133,7 @@ namespace ScreamJamGame
                     break;
             }
 
-            foreach (Button button in buttons)
-            {
-                if (button.ActiveState == state)
-                {
-                    button.Update();
-                    
-                }
-            }
-
+            
             
 
             base.Update(gameTime);
@@ -139,15 +145,22 @@ namespace ScreamJamGame
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
-            
-            switch(state)
+            foreach (Button button in buttons)
+            {
+                if (button.ActiveState == state)
+                {
+                    button.Draw(_spriteBatch);
+                }
+            }
+
+            switch (state)
             {
                 case GameState.MainMenu:
                     GraphicsDevice.Clear(Color.White);
+
                     break;
                 case GameState.Gameplay:
                     _spriteBatch.Draw(background, backgroundRect, Color.White);
-                    myLevel.DisplayTiles();
                     player.Draw(_spriteBatch);
                     proj.Draw(_spriteBatch);
                     enemy.Draw(_spriteBatch);
@@ -162,13 +175,7 @@ namespace ScreamJamGame
                     break;
             }
 
-            foreach (Button button in buttons)
-            {
-                if (button.ActiveState == state)
-                {
-                    button.Draw(_spriteBatch);
-                }
-            }
+           
             /*
             _spriteBatch.DrawString(
                 consolas24,
@@ -183,6 +190,8 @@ namespace ScreamJamGame
                 Color.Black
             );
             */
+            _spriteBatch.DrawString(
+                consolas24,
                 $"{backgroundRect.X},{backgroundRect.Y}",
                 new Vector2(400, 280),
                 Color.Black
@@ -195,6 +204,29 @@ namespace ScreamJamGame
         { 
             backgroundRect.Y += (int)(change.Y / backgroundRect.Height * Camera.MaxHeight);
             backgroundRect.X += (int)(change.X / backgroundRect.Width * Camera.MaxWidth);
+        }
+        public void Transition(GameState newState)
+        {
+            GameState tempState = state;
+            state = newState;
+
+           /* if (newState == GameState.Gameplay)
+            {
+                if (tempState != GameState.Lose)
+                {
+
+                }*/
+                player.Reset(FileReaderWriter.LoadLevel());
+                Camera.Reset();
+              /*
+                Enemy.Reset()
+                ProjectileManager.Clear();
+                backgroundRect.Y = 0 - backgroundRect.Height + _graphics.PreferredBackBufferHeight;
+            }*/
+            /*if (newState == GameState.MainMenu && tempState != GameState.Credits)
+            {
+
+            }*/
         }
     }
 }

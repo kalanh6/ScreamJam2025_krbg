@@ -31,9 +31,12 @@ namespace ScreamJamGame
 
         internal static Vector2 Screen { get { return new Vector2(_screenWidth, _screenHeight); } }
 
-        internal static void fileLoad(int width, int height, Vector2 playerCords)
+        public static void fileLoad(int width, int height, Vector2 playerCords)
         {
-
+            _worldHeight = height;
+            _worldWidth = width;
+            _position.Y = (int)(playerCords.Y / 1.5);
+            _position.Y = (int)(playerCords.X / 1.5);
         }
 
         public static void Load(int screenWidth, int screenHeight, int worldWidth, int worldHeight)
@@ -52,6 +55,10 @@ namespace ScreamJamGame
                 _position += direction;
                 Game1.BackgroundMove(direction);
             }
+        }
+        public static void Reset()
+        {
+            _position = new Vector2(-100, -300);
         }
     }
 }

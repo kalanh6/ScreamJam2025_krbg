@@ -4,10 +4,10 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/glgal/OneDrive/Documents/ScreamJam/ScreamJamGame/ScreamJamGame/Content/consolas-24.spritefont</File>
-    <File>C:/Users/glgal/OneDrive/Documents/ScreamJam/ScreamJamGame/ScreamJamGame/Content/download (5).jpg</File>
-    <File>C:/Users/glgal/OneDrive/Documents/ScreamJam/ScreamJamGame/ScreamJamGame/Content/roguelikeSheet_transparent.png</File>
-    <File>C:/Users/glgal/OneDrive/Documents/ScreamJam/ScreamJamGame/ScreamJamGame/Content/temp.png</File>
+    <File>D:/Profiles/kjh8438/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/consolas-24.spritefont</File>
+    <File>D:/Profiles/kjh8438/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/download (5).jpg</File>
+    <File>D:/Profiles/kjh8438/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/roguelikeSheet_transparent.png</File>
+    <File>D:/Profiles/kjh8438/Documents/GitHub/ScreamJam2025_krbg/ScreamJamGame/ScreamJamGame/Content/temp.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
